@@ -1,5 +1,5 @@
 // Offline support: keep the app itself on the device. Translations and Gutenberg downloads always go to the network.
-const VERSION = "leselupe-v1";
+const VERSION = "leselupe-v2";
 const SHELL = [
   "./",
   "./css/app.css",
