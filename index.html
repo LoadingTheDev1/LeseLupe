@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Leselupe</title>
+  <meta name="description" content="A free reader for books in another language. Tap any word or sentence to see its translation, save words to lists and track your reading.">
+  <meta name="theme-color" content="#17675f">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Leselupe">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="vendor/jszip.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#/library" aria-label="Leselupe home">
+      <img src="icons/icon.svg" alt="" width="28" height="28">
+      <span>Leselupe</span>
+    </a>
+    <nav class="tabs" aria-label="Main">
+      <a href="#/library" data-route="library">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 015.5 4H9v16H5.5A1.5 1.5 0 014 18.5zM9 4h4v16H9zM14.5 5.2l3.4-.9 3.1 14.6-3.4.9z"/></svg>
+        <span>Library</span>
+      </a>
+      <a href="#/discover" data-route="discover">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        <span>Free books</span>
+      </a>
+      <a href="#/words" data-route="words">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10a1 1 0 011 1v15l-6-3.5L6 20V5a1 1 0 011-1z"/></svg>
+        <span>Words</span>
+      </a>
+      <a href="#/stats" data-route="stats">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V5M19 20v-6"/></svg>
+        <span>Stats</span>
+      </a>
+      <a href="#/settings" data-route="settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="view" tabindex="-1">
+    <noscript><p class="wrap">Leselupe needs JavaScript to run.</p></noscript>
+  </main>
+
+  <div id="sheet" class="sheet" role="dialog" aria-label="Translation" hidden></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <div id="busy" class="busy" hidden><div class="busy-card"><span class="spinner" aria-hidden="true"></span><p id="busyMsg">Working…</p></div></div>
+  <div class="drop-hint" aria-hidden="true"><p>Drop EPUB, PDF or TXT files to add them</p></div>
+</body>
+</html>
